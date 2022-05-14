@@ -14,7 +14,7 @@ datasource db {
 model Item {
   id Int @id @default(autoincrement())
   name String @unique
-  quantity String
+  quantity Int
   deleted Boolean @default(false)
   comment String?
 }
