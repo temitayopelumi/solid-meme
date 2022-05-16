@@ -6,7 +6,7 @@ The source code for a recruitment task for Shopify's Backend Engineer Intern pos
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Tought Process</a>
+      <a href="#about-the-project">About</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -33,6 +33,16 @@ The purpose of this project was to utilize Express js to build an inventory trac
 - Get a single item
 - Delete an Item
 - Bonus: When deleting, allow deletion comments and undeletion
+
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/)
+* [Prisma](https://www.prisma.io/)
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
