@@ -19,11 +19,11 @@ app.use(express.json());
 app.use(cors());
 
 
-// app.get('/', (req, res) => {
-//     res.send('<h1>Inventory API</h1><a href="/api-docs">Documentation</a>');
-// });
+app.get('/', (req, res) => {
+    res.send('<h1>Inventory API</h1><a href="/api-docs">Documentation</a>');
+});
 
-app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.use('/api/v1/items', inventoryRouter)
 app.get('/check', (req, res) => {
