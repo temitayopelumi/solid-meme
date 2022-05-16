@@ -2,7 +2,7 @@
 CREATE TABLE "Item" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
-    "quantity" TEXT NOT NULL,
+    "quantity" INTEGER NOT NULL,
     "deleted" BOOLEAN NOT NULL DEFAULT false,
     "comment" TEXT
 );
