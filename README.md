@@ -18,8 +18,8 @@ The source code for a recruitment task for Shopify's Backend Engineer Intern pos
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#Link">Links</a></li>
+    
   </ol>
 </details>
 
@@ -47,8 +47,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -72,5 +71,14 @@ To get a local copy up and running follow these simple example steps.
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Links
+
+### This is the code on replit.
+https://replit.com/@olalekantemitay/solid-meme
+You can fork and run to see how it works.
+
+### The replit live link
+https://solid-meme.olalekantemitay.repl.co/
 
 
