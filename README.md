@@ -18,7 +18,7 @@ The source code for a recruitment task for Shopify's Backend Engineer Intern pos
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#Link">Links</a></li>
+    <li><a href="#Links">Links</a></li>
     
   </ol>
 </details>
