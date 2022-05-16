@@ -1,0 +1,184 @@
+openapi: 3.0.0
+info: 
+  title: Simple Inventory API
+  description: A simple inventory API
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: https://solid-meme.olalekantemitay.repl.co/api/v1
+    variables: {}
+
+paths:
+  /items:
+    post:
+      tags:
+        - Items
+      summary: Create Item
+      operationId: CreateItem
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateItemRequest'
+            example:
+              name: pencil
+              quantity: 1000
+        required: true
+      responses:
+        '201':
+          description: 'Item created successfully'
+          headers: {}
+        '400':
+          description: 'The item name exists! or  the name or quantity is not in the request Body '
+          headers: {}
+        '500':
+          description: 'Server Error'
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+        - Items
+      summary: Get Items
+      operationId: GetItems
+      parameters: []
+      responses:
+        '200':
+          description: 'Item fetched successfully'
+          headers: {}
+      deprecated: false
+  /items/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The item ID
+    get:
+      tags:
+        - Items
+      summary: Get Single Item
+      operationId: GetSingleItem
+      parameters: []
+      responses:
+        '200':
+          description: 'Item fetched succesfully'
+          headers: {}
+        '400':
+          description: 'Item is not found'
+        '500':
+          description: 'Server error'
+      deprecated: false
+    patch:
+      tags:
+        - Items
+      summary: Update an Item
+      operationID: UpdateItem
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateItemRequest'
+            example:
+              name: pen
+              quantity: 200
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /items/delete/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The item ID
+    patch: 
+      tags:
+        - Items
+      summary: Delete an Item
+      operationID: DeleteItem
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteItemRequest'
+            example:
+              comment: Out of Stock
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /items/restore/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The item ID
+    patch: 
+      tags:
+        - Items
+      summary: Restore an Item
+      operationID: RestoreItem
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    CreateItemRequest:
+      title: CreateItemRequest
+      required:
+        - name
+        - quantity
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: int
+      example:
+        name: Pencil
+        quantity: 200
+    DeleteItemRequest:
+      title: DeleteItemRequest
+      required:
+        - comment
+      type: object
+      properties:
+        comment:
+          type: text
+      example:
+        comment: Out of Stock
+    UpdateItemRequest:
+      title: UpdateItemRequest
+      required:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: int
+      example:
+        name: pencil
+        quantity: 100
+security:
+  - httpBearer: []
+tags:
+  - name: Items
+    description: ''
+  
+  

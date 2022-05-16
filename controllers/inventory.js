@@ -28,8 +28,8 @@ const updateItem = async (req, res) => {
   const name = req.body.name
   const quantity = req.body.quantity
 
-  if ((!name) || (!quantity)) {
-    throw new BadRequestError('fields are required')
+  if ((!name) && (!quantity)) {
+    throw new BadRequestError('Either name or quantity is required')
 
   }
 
@@ -38,16 +38,16 @@ const updateItem = async (req, res) => {
     data: { name: name, quantity: quantity },
   })
 
-  res.status(StatusCodes.OK).json({ message: "Success", data: updated_item.name })
+  res.status(StatusCodes.OK).json({ message: "Success", data:{name: updated_item.name }  })
 
 }
 
 const getAllItems = async (req, res) => {
   const items = await prisma.item.findMany({
     where: { deleted: false }, select: {
-      quantity: true,
+      id: true,
       name: true,
-      id: true
+      quantity: true
     },
   })
   res.status(StatusCodes.OK).json({ message: "Success", data: items })
@@ -90,7 +90,6 @@ const deleteItem = async (req, res) => {
     where: { id: Number(id) },
     data: { deleted: true, comment: comment },
   })
-  // res.status(StatusCodes.OK).json({ message: "Item deleted", data: { name: _item.name, comment: _item.comment } })
   res.status(StatusCodes.OK).json({ message: "Item deleted", data: { name: updated_item.name, comment: updated_item.comment } })
 
 }
