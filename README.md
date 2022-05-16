@@ -43,6 +43,33 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Prisma](https://www.prisma.io/)
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+* node and npm
+  ```sh
+  sudo apt install nodejs
+  ```
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/temitayopelumi/solid-meme.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. start the project
+   ```sh
+   npm start
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
