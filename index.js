@@ -25,7 +25,7 @@ app.use(errorHandlerMiddleware)
 
 const start = async () =>{
     try {
-        app.listen(process.env.PORT, ()=>
+        app.listen(3000, ()=>
         console.log('server is up'))
     } 
     catch (error) {

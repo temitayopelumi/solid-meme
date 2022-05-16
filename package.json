@@ -14,7 +14,8 @@
 
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "prestart": "npx prisma migrate dev --name migration",
+    "start": "node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
