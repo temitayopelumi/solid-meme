@@ -20,7 +20,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    res.send('<h1>Inventory API</h1><a href="/api-docs">Documentation</a>');
+    res.send('<h1>Inventory API</h1><h3>Link to the documentation</h3><a href="/api-docs">Documentation</a><h3>Link to the github repo</h3><a href="https://github.com/temitayopelumi/solid-meme">Code</a>');
 });
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
