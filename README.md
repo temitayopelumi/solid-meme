@@ -1,5 +1,4 @@
-# Shopify Backend Engineer recruitment task
-The source code for a recruitment task for Shopify's Backend Engineer Intern post can be found in this repo.
+
 
 
 <details>
